@@ -1,3 +1,25 @@
+# Commands to generate plugin zip
+
+1) Install dependencies using poetry:
+``` 
+poetry update --lock
+poetry install --no-root
+```
+
+2) After all changes on soure code, build using:
+```
+poetry run python admin.py install
+```
+This will generate the *build/* folder.
+
+3) To zip the folder *qgis_stac/* inside this *build/* folder, run:
+```
+cd build/ && zip -o qgis_stac.zip qgis_stac/* && cp qgis_stac.zip ../ && cd ..
+```
+
+4) Then, install it on QGIS using **Install from zip** option.
+
+
 # qgis-stac-plugin
 
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/stac-utils/qgis-stac-plugin/ci.yml?branch=main)
