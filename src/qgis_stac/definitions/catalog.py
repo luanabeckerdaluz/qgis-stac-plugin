@@ -7,10 +7,17 @@ from ..api.models import ApiCapability
 
 CATALOGS = [
     {
+        "id": "07e3e9dd-cbad-4cf6-8336-424b88abb584",
+        "name": "Brazil Data Cube STAC API",
+        "url": "https://data.inpe.br/bdc/stac/v1/",
+        "selected": True,
+        "capability": None
+    },
+    {
         "id": "07e3e9dd-cbad-4cf6-8336-424b88abf8f3",
         "name": "Microsoft Planetary Computer STAC API",
         "url": "https://planetarycomputer.microsoft.com/api/stac/v1",
-        "selected": True,
+        "selected": False,
         "capability": ApiCapability.SUPPORT_SAS_TOKEN.value
     },
     {
