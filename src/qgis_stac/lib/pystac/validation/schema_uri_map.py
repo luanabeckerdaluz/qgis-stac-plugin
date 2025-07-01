@@ -1,11 +1,11 @@
 from abc import ABC, abstractmethod
 from functools import lru_cache
-from pystac.serialization.identify import OldExtensionShortIDs, STACVersionID
+from ..serialization.identify import OldExtensionShortIDs, STACVersionID
 from typing import Any, Callable, Dict, List, Optional, Tuple
 
-import pystac
-from pystac.serialization import STACVersionRange
-from pystac.stac_object import STACObjectType
+from qgis_stac.lib import pystac
+from ..serialization import STACVersionRange
+from ..stac_object import STACObjectType
 
 
 class SchemaUriMap(ABC):

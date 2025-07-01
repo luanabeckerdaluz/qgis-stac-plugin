@@ -5,13 +5,13 @@ https://github.com/stac-extensions/raster
 
 from typing import Any, Dict, Iterable, List, Optional, Union
 
-import pystac
-from pystac.extensions.base import (
+from qgis_stac.lib import pystac
+from ..extensions.base import (
     ExtensionManagementMixin,
     PropertiesExtension,
     SummariesExtension,
 )
-from pystac.utils import StringEnum, get_opt, get_required, map_opt
+from ..utils import StringEnum, get_opt, get_required, map_opt
 
 SCHEMA_URI = "https://stac-extensions.github.io/raster/v1.0.0/schema.json"
 

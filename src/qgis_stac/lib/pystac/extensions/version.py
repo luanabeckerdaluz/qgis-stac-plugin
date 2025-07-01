@@ -2,16 +2,16 @@
 
 https://github.com/stac-extensions/version
 """
-from pystac.utils import get_required, map_opt
+from ..utils import get_required, map_opt
 from typing import Any, Dict, Generic, List, Optional, TypeVar, Union, cast
 
-import pystac
-from pystac.utils import StringEnum
-from pystac.extensions.base import (
+from qgis_stac.lib import pystac
+from ..utils import StringEnum
+from ..extensions.base import (
     ExtensionManagementMixin,
     PropertiesExtension,
 )
-from pystac.extensions.hooks import ExtensionHooks
+from ..extensions.hooks import ExtensionHooks
 
 T = TypeVar("T", pystac.Collection, pystac.Item)
 

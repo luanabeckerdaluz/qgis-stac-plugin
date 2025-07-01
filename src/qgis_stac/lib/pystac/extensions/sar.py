@@ -5,16 +5,16 @@ https://github.com/stac-extensions/sar
 
 from typing import Any, Dict, Generic, Iterable, List, Optional, TypeVar, cast, Union
 
-import pystac
-from pystac.serialization.identify import STACJSONDescription, STACVersionID
-from pystac.summaries import RangeSummary
-from pystac.extensions.base import (
+from qgis_stac.lib import pystac
+from ..serialization.identify import STACJSONDescription, STACVersionID
+from ..summaries import RangeSummary
+from ..extensions.base import (
     ExtensionManagementMixin,
     PropertiesExtension,
     SummariesExtension,
 )
-from pystac.extensions.hooks import ExtensionHooks
-from pystac.utils import StringEnum, get_required, map_opt
+from ..extensions.hooks import ExtensionHooks
+from ..utils import StringEnum, get_required, map_opt
 
 T = TypeVar("T", pystac.Item, pystac.Asset)
 

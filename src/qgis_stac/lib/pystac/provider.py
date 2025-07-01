@@ -1,6 +1,6 @@
 from typing import Any, Dict, List, Optional
 
-from pystac.utils import StringEnum
+from .utils import StringEnum
 
 
 class ProviderRole(StringEnum):

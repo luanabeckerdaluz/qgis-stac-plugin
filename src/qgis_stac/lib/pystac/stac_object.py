@@ -1,13 +1,13 @@
 from abc import ABC, abstractmethod
 from typing import Any, Dict, Iterable, List, Optional, Type, cast, TYPE_CHECKING, Union
 
-import pystac
-from pystac import STACError
-from pystac.link import Link
-from pystac.utils import StringEnum, is_absolute_href, make_absolute_href
+from qgis_stac.lib import pystac
+from qgis_stac.lib.pystac import STACError
+from .link import Link
+from .utils import StringEnum, is_absolute_href, make_absolute_href
 
 if TYPE_CHECKING:
-    from pystac.catalog import Catalog as Catalog_Type
+    from .catalog import Catalog as Catalog_Type
 
 
 class STACObjectType(StringEnum):

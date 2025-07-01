@@ -1,11 +1,11 @@
 from abc import ABC, abstractmethod
 import logging
 import json
-from pystac.stac_object import STACObjectType
+from ..stac_object import STACObjectType
 from typing import Any, Dict, List, Optional, Tuple
 
-import pystac
-from pystac.validation.schema_uri_map import DefaultSchemaUriMap, SchemaUriMap
+from qgis_stac.lib import pystac
+from ..validation.schema_uri_map import DefaultSchemaUriMap, SchemaUriMap
 
 try:
     import jsonschema

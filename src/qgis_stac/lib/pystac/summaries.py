@@ -3,8 +3,8 @@ import numbers
 from enum import Enum
 from functools import lru_cache
 
-import pystac
-from pystac.utils import get_required
+from qgis_stac.lib import pystac
+from .utils import get_required
 
 from typing import (
     Any,
@@ -24,8 +24,8 @@ else:
     from typing_extensions import Protocol
 
 if TYPE_CHECKING:
-    from pystac.item import Item as Item_Type
-    from pystac.collection import Collection as Collection_Type
+    from .item import Item as Item_Type
+    from .collection import Collection as Collection_Type
 
 from abc import abstractmethod
 

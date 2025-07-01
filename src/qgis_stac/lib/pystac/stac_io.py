@@ -15,9 +15,9 @@ from typing import (
 from urllib.request import urlopen
 from urllib.error import HTTPError
 
-import pystac
-from pystac.utils import safe_urlparse
-from pystac.serialization import (
+from qgis_stac.lib import pystac
+from .utils import safe_urlparse
+from .serialization import (
     merge_common_properties,
     identify_stac_object_type,
     identify_stac_object,
@@ -31,9 +31,9 @@ except ImportError:
     orjson = None  # type: ignore[assignment]
 
 if TYPE_CHECKING:
-    from pystac.stac_object import STACObject as STACObject_Type
-    from pystac.catalog import Catalog as Catalog_Type
-    from pystac.link import Link as Link_Type
+    from .stac_object import STACObject as STACObject_Type
+    from .catalog import Catalog as Catalog_Type
+    from .link import Link as Link_Type
 
 
 class StacIO(ABC):

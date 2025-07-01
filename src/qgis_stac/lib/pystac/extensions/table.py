@@ -4,13 +4,13 @@ https://github.com/stac-extensions/table
 """
 from typing import Any, Dict, Generic, List, Optional, TypeVar, Union, cast
 
-import pystac
-from pystac.extensions.base import (
+from qgis_stac.lib import pystac
+from ..extensions.base import (
     ExtensionManagementMixin,
     PropertiesExtension,
 )
-from pystac.extensions.hooks import ExtensionHooks
-from pystac.utils import get_required
+from ..extensions.hooks import ExtensionHooks
+from ..utils import get_required
 
 T = TypeVar("T", pystac.Collection, pystac.Item, pystac.Asset)
 

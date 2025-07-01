@@ -16,17 +16,17 @@ from typing import (
     cast,
 )
 
-import pystac
-from pystac.summaries import RangeSummary
-from pystac.extensions.base import (
+from qgis_stac.lib import pystac
+from ..summaries import RangeSummary
+from ..extensions.base import (
     ExtensionManagementMixin,
     PropertiesExtension,
     SummariesExtension,
 )
-from pystac.extensions.hooks import ExtensionHooks
-from pystac.extensions import view, projection
-from pystac.serialization.identify import STACJSONDescription, STACVersionID
-from pystac.utils import get_required, map_opt
+from ..extensions.hooks import ExtensionHooks
+from ..extensions import view, projection
+from ..serialization.identify import STACJSONDescription, STACVersionID
+from ..utils import get_required, map_opt
 
 T = TypeVar("T", pystac.Item, pystac.Asset)
 

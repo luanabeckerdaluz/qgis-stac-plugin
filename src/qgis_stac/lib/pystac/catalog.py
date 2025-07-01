@@ -1,6 +1,6 @@
 import os
 from copy import deepcopy
-from pystac.errors import STACTypeError
+from .errors import STACTypeError
 from typing import (
     Any,
     Callable,
@@ -14,21 +14,21 @@ from typing import (
     cast,
 )
 
-import pystac
-from pystac.stac_object import STACObject, STACObjectType
-from pystac.layout import (
+from qgis_stac.lib import pystac
+from .stac_object import STACObject, STACObjectType
+from .layout import (
     BestPracticesLayoutStrategy,
     HrefLayoutStrategy,
     LayoutTemplate,
 )
-from pystac.link import Link
-from pystac.cache import ResolvedObjectCache
-from pystac.serialization import (
+from .link import Link
+from .cache import ResolvedObjectCache
+from .serialization import (
     identify_stac_object_type,
     identify_stac_object,
     migrate_to_latest,
 )
-from pystac.utils import (
+from .utils import (
     StringEnum,
     is_absolute_href,
     make_absolute_href,
@@ -36,9 +36,9 @@ from pystac.utils import (
 )
 
 if TYPE_CHECKING:
-    from pystac.asset import Asset as Asset_Type
-    from pystac.item import Item as Item_Type
-    from pystac.collection import Collection as Collection_Type
+    from .asset import Asset as Asset_Type
+    from .item import Item as Item_Type
+    from .collection import Collection as Collection_Type
 
 
 class CatalogType(StringEnum):

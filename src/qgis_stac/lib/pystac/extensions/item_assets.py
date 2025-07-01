@@ -6,11 +6,11 @@ https://github.com/stac-extensions/item-assets
 from copy import deepcopy
 from typing import Any, Dict, List, Optional
 
-import pystac
-from pystac.extensions.base import ExtensionManagementMixin
-from pystac.extensions.hooks import ExtensionHooks
-from pystac.serialization.identify import STACJSONDescription, STACVersionID
-from pystac.utils import get_required
+from qgis_stac.lib import pystac
+from ..extensions.base import ExtensionManagementMixin
+from ..extensions.hooks import ExtensionHooks
+from ..serialization.identify import STACJSONDescription, STACVersionID
+from ..utils import get_required
 
 SCHEMA_URI = "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json"
 

@@ -1,13 +1,13 @@
 from typing import Any, Iterable, Dict, Optional, TYPE_CHECKING
 
-import pystac
-import pystac.validation
-from pystac_client.collection_client import CollectionClient
+from qgis_stac.lib import pystac
+from ..pystac import validation
+from .collection_client import CollectionClient
 
-from pystac_client.conformance import ConformanceClasses
-from pystac_client.exceptions import APIError
-from pystac_client.item_search import ItemSearch
-from pystac_client.stac_api_io import StacApiIO
+from .conformance import ConformanceClasses
+from .exceptions import APIError
+from .item_search import ItemSearch
+from .stac_api_io import StacApiIO
 
 if TYPE_CHECKING:
     from pystac.item import Item as Item_Type

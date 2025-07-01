@@ -3,14 +3,14 @@ from collections import OrderedDict
 from string import Formatter
 from typing import Any, Callable, Dict, List, Optional, TYPE_CHECKING, Union
 
-import pystac
-from pystac.utils import safe_urlparse, join_path_or_url, JoinType
+from qgis_stac.lib import pystac
+from .utils import safe_urlparse, join_path_or_url, JoinType
 
 if TYPE_CHECKING:
-    from pystac.stac_object import STACObject as STACObject_Type
-    from pystac.catalog import Catalog as Catalog_Type
-    from pystac.collection import Collection as Collection_Type
-    from pystac.item import Item as Item_Type
+    from .stac_object import STACObject as STACObject_Type
+    from .catalog import Catalog as Catalog_Type
+    from .collection import Collection as Collection_Type
+    from .item import Item as Item_Type
 
 
 class TemplateError(Exception):

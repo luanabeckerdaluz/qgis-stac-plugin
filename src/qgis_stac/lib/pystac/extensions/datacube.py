@@ -6,13 +6,13 @@ https://github.com/stac-extensions/datacube
 from abc import ABC
 from typing import Any, Dict, Generic, List, Optional, TypeVar, Union, cast
 
-import pystac
-from pystac.extensions.base import (
+from qgis_stac.lib import pystac
+from ..extensions.base import (
     ExtensionManagementMixin,
     PropertiesExtension,
 )
-from pystac.extensions.hooks import ExtensionHooks
-from pystac.utils import StringEnum, get_required, map_opt
+from ..extensions.hooks import ExtensionHooks
+from ..utils import StringEnum, get_required, map_opt
 
 T = TypeVar("T", pystac.Collection, pystac.Item, pystac.Asset)
 

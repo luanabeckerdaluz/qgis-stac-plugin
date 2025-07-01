@@ -15,22 +15,22 @@ import re
 from requests import Request, Session
 
 import pystac
-from pystac.link import Link
-from pystac.serialization import (
+from ..pystac.link import Link
+from ..pystac.serialization import (
     merge_common_properties,
     identify_stac_object_type,
     identify_stac_object,
     migrate_to_latest,
 )
-from pystac.stac_io import DefaultStacIO
+from ..pystac.stac_io import DefaultStacIO
 
-import pystac_client
+from qgis_stac.lib import pystac_client
 from .exceptions import APIError
 from .conformance import ConformanceClasses, CONFORMANCE_URIS
 
 if TYPE_CHECKING:
-    from pystac.stac_object import STACObject as STACObject_Type
-    from pystac.catalog import Catalog as Catalog_Type
+    from ..pystac.stac_object import STACObject as STACObject_Type
+    from ..pystac.catalog import Catalog as Catalog_Type
 
 logger = logging.getLogger(__name__)
 

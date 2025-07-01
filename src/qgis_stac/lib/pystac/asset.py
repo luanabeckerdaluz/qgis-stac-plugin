@@ -1,13 +1,13 @@
 from copy import copy
 from typing import Any, Dict, List, Optional, TYPE_CHECKING, Union
 
-from pystac import common_metadata
-from pystac import utils
+from . import common_metadata
+from . import utils
 
 if TYPE_CHECKING:
-    from pystac.collection import Collection as Collection_Type
-    from pystac.common_metadata import CommonMetadata as CommonMetadata_Type
-    from pystac.item import Item as Item_Type
+    from .collection import Collection as Collection_Type
+    from .common_metadata import CommonMetadata as CommonMetadata_Type
+    from .item import Item as Item_Type
 
 
 class Asset:

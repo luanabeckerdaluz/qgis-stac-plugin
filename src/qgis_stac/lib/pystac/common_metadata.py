@@ -1,14 +1,14 @@
 from datetime import datetime as Datetime
-from pystac.errors import STACError
+from .errors import STACError
 from typing import Any, cast, Dict, List, Optional, Type, TYPE_CHECKING, TypeVar, Union
 
-import pystac
-from pystac import utils
+from qgis_stac.lib import pystac
+from . import utils
 
 if TYPE_CHECKING:
-    from pystac.provider import Provider as Provider_Type
-    from pystac.asset import Asset as Asset_Type
-    from pystac.item import Item as Item_Type
+    from .provider import Provider as Provider_Type
+    from .asset import Asset as Asset_Type
+    from .item import Item as Item_Type
 
 
 P = TypeVar("P")

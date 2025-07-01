@@ -5,15 +5,15 @@ https://github.com/stac-extensions/file
 
 from typing import Any, Dict, Iterable, List, Optional, Union
 
-import pystac
-from pystac.extensions.base import ExtensionManagementMixin, PropertiesExtension
-from pystac.extensions.hooks import ExtensionHooks
-from pystac.serialization.identify import (
+from qgis_stac.lib import pystac
+from ..extensions.base import ExtensionManagementMixin, PropertiesExtension
+from ..extensions.hooks import ExtensionHooks
+from ..serialization.identify import (
     OldExtensionShortIDs,
     STACJSONDescription,
     STACVersionID,
 )
-from pystac.utils import StringEnum, get_required, map_opt
+from ..utils import StringEnum, get_required, map_opt
 
 SCHEMA_URI = "https://stac-extensions.github.io/file/v2.0.0/schema.json"
 

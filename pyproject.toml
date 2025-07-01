@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "qgis-stac-plugin"
-version = "1.1.2"
+version = "1.2.0"
 description = "QGIS plugin for reading STAC API catalogs"
-authors = ["Kartoza <info@kartoza.com>"]
+authors = ["Kartoza <info@kartoza.com>", "Luana Becker da Luz <luanabeckerdaluz@gmail.com>"]
 license = "GPL v3.0"
 
 [tool.poetry.dependencies]

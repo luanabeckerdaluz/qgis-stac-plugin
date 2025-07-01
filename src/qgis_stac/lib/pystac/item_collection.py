@@ -1,10 +1,10 @@
 from copy import deepcopy
-from pystac.errors import STACTypeError
+from .errors import STACTypeError
 from typing import Any, Dict, Iterator, List, Optional, Collection, Iterable, Union
 
-import pystac
-from pystac.utils import make_absolute_href, is_absolute_href
-from pystac.serialization.identify import identify_stac_object_type
+from qgis_stac.lib import pystac
+from .utils import make_absolute_href, is_absolute_href
+from .serialization.identify import identify_stac_object_type
 
 
 ItemLike = Union[pystac.Item, Dict[str, Any]]

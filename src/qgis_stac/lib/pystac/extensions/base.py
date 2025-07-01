@@ -12,7 +12,7 @@ from typing import (
     Union,
 )
 
-import pystac
+from qgis_stac.lib import pystac
 
 
 class SummariesExtension:

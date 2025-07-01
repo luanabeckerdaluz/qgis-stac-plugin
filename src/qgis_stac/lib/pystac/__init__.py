@@ -39,7 +39,7 @@ __all__ = [
     "set_stac_version",
 ]
 
-from pystac.errors import (
+from .errors import (
     STACError,
     STACTypeError,
     DuplicateObjectKeyError,
@@ -51,63 +51,62 @@ from pystac.errors import (
 )
 
 from typing import Any, Dict, Optional
-from pystac.version import (
+from .version import (
     __version__,
     get_stac_version,
     set_stac_version,
 )
-from pystac.media_type import MediaType
-from pystac.rel_type import RelType
-from pystac.stac_io import StacIO
-from pystac.stac_object import STACObject, STACObjectType
-from pystac.link import Link, HIERARCHICAL_LINKS
-from pystac.catalog import Catalog, CatalogType
-from pystac.collection import (
+from .media_type import MediaType
+from .rel_type import RelType
+from .stac_io import StacIO
+from .stac_object import STACObject, STACObjectType
+from .link import Link, HIERARCHICAL_LINKS
+from .catalog import Catalog, CatalogType
+from .collection import (
     Collection,
     Extent,
     SpatialExtent,
     TemporalExtent,
 )
-from pystac.common_metadata import CommonMetadata
-from pystac.summaries import RangeSummary, Summaries
-from pystac.asset import Asset
-from pystac.item import Item
-from pystac.item_collection import ItemCollection
-from pystac.provider import ProviderRole, Provider
-import pystac.validation
+from .common_metadata import CommonMetadata
+from .summaries import RangeSummary, Summaries
+from .asset import Asset
+from .item import Item
+from .item_collection import ItemCollection
+from .provider import ProviderRole, Provider
+from . import validation
 
-import pystac.extensions.hooks
-import pystac.extensions.datacube
-import pystac.extensions.eo
-import pystac.extensions.file
-import pystac.extensions.item_assets
-import pystac.extensions.label
-import pystac.extensions.pointcloud
-import pystac.extensions.projection
-import pystac.extensions.sar
-import pystac.extensions.sat
-import pystac.extensions.scientific
-import pystac.extensions.table
-import pystac.extensions.timestamps
-import pystac.extensions.version
-import pystac.extensions.view
+from .extensions import datacube
+from .extensions import eo
+from .extensions import file
+from .extensions import item_assets
+from .extensions import label
+from .extensions import pointcloud
+from .extensions import projection
+from .extensions import sar
+from .extensions import sat
+from .extensions import scientific
+from .extensions import table
+from .extensions import timestamps
+from .extensions import version
+from .extensions import view
 
-EXTENSION_HOOKS = pystac.extensions.hooks.RegisteredExtensionHooks(
+EXTENSION_HOOKS = extensions.hooks.RegisteredExtensionHooks(
     [
-        pystac.extensions.datacube.DATACUBE_EXTENSION_HOOKS,
-        pystac.extensions.eo.EO_EXTENSION_HOOKS,
-        pystac.extensions.file.FILE_EXTENSION_HOOKS,
-        pystac.extensions.item_assets.ITEM_ASSETS_EXTENSION_HOOKS,
-        pystac.extensions.label.LABEL_EXTENSION_HOOKS,
-        pystac.extensions.pointcloud.POINTCLOUD_EXTENSION_HOOKS,
-        pystac.extensions.projection.PROJECTION_EXTENSION_HOOKS,
-        pystac.extensions.sar.SAR_EXTENSION_HOOKS,
-        pystac.extensions.sat.SAT_EXTENSION_HOOKS,
-        pystac.extensions.scientific.SCIENTIFIC_EXTENSION_HOOKS,
-        pystac.extensions.table.TABLE_EXTENSION_HOOKS,
-        pystac.extensions.timestamps.TIMESTAMPS_EXTENSION_HOOKS,
-        pystac.extensions.version.VERSION_EXTENSION_HOOKS,
-        pystac.extensions.view.VIEW_EXTENSION_HOOKS,
+        datacube.DATACUBE_EXTENSION_HOOKS,
+        eo.EO_EXTENSION_HOOKS,
+        file.FILE_EXTENSION_HOOKS,
+        item_assets.ITEM_ASSETS_EXTENSION_HOOKS,
+        label.LABEL_EXTENSION_HOOKS,
+        pointcloud.POINTCLOUD_EXTENSION_HOOKS,
+        projection.PROJECTION_EXTENSION_HOOKS,
+        sar.SAR_EXTENSION_HOOKS,
+        sat.SAT_EXTENSION_HOOKS,
+        scientific.SCIENTIFIC_EXTENSION_HOOKS,
+        table.TABLE_EXTENSION_HOOKS,
+        timestamps.TIMESTAMPS_EXTENSION_HOOKS,
+        version.VERSION_EXTENSION_HOOKS,
+        view.VIEW_EXTENSION_HOOKS,
     ]
 )
 

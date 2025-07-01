@@ -46,10 +46,10 @@ from .models import (
 
 from ..lib import planetary_computer as pc
 
-from pystac_client import Client
-from pystac_client.exceptions import APIError
+from ..lib.pystac_client import Client
+from ..lib.pystac_client.exceptions import APIError
 
-from pystac.errors import STACTypeError
+from ..lib.pystac.errors import STACTypeError
 
 from ..utils import log, tr
 

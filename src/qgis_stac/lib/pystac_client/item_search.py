@@ -8,14 +8,14 @@ from datetime import timezone, datetime as datetime_
 from typing import Dict, Iterator, List, Optional, TYPE_CHECKING, Tuple, Union
 import warnings
 
-from pystac import Collection, Item, ItemCollection
-from pystac.stac_io import StacIO
+from ..pystac import Collection, Item, ItemCollection
+from ..pystac.stac_io import StacIO
 
-from pystac_client.stac_api_io import StacApiIO
-from pystac_client.conformance import ConformanceClasses
+from .stac_api_io import StacApiIO
+from .conformance import ConformanceClasses
 
 if TYPE_CHECKING:
-    from pystac_client.client import Client
+    from .client import Client
 
 DATETIME_REGEX = re.compile(r"(?P<year>\d{4})(\-(?P<month>\d{2})(\-(?P<day>\d{2})"
                             r"(?P<remainder>(T|t)\d{2}:\d{2}:\d{2}(\.\d+)?"

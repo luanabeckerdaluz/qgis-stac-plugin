@@ -1,4 +1,4 @@
-from pystac.utils import StringEnum
+from .utils import StringEnum
 
 
 class MediaType(StringEnum):

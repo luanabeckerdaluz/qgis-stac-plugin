@@ -3,13 +3,13 @@
 https://github.com/stac-extensions/label
 """
 
-from pystac.extensions.base import ExtensionManagementMixin, SummariesExtension
+from ..extensions.base import ExtensionManagementMixin, SummariesExtension
 from typing import Any, Dict, Iterable, List, Optional, Sequence, Union, cast
 
-import pystac
-from pystac.serialization.identify import STACJSONDescription, STACVersionID
-from pystac.extensions.hooks import ExtensionHooks
-from pystac.utils import StringEnum, get_required, map_opt
+from qgis_stac.lib import pystac
+from ..serialization.identify import STACJSONDescription, STACVersionID
+from ..extensions.hooks import ExtensionHooks
+from ..utils import StringEnum, get_required, map_opt
 
 SCHEMA_URI = "https://stac-extensions.github.io/label/v1.0.0/schema.json"
 

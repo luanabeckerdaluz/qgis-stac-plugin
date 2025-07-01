@@ -1,7 +1,7 @@
 import os
 import posixpath
 from enum import Enum
-from pystac.errors import RequiredPropertyMissing
+from .errors import RequiredPropertyMissing
 from typing import Any, Callable, Dict, List, Optional, TypeVar, Union, cast
 from urllib.parse import urljoin, urlparse, urlunparse, ParseResult as URLParseResult
 from datetime import datetime, timezone

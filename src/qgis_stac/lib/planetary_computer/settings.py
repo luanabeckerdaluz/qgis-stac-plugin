@@ -1,6 +1,6 @@
 from functools import lru_cache
 from typing import Optional
-import pydantic
+from .. import pydantic
 
 SETTINGS_ENV_FILE = "~/.planetarycomputer/settings.env"
 SETTINGS_ENV_PREFIX = "PC_SDK_"

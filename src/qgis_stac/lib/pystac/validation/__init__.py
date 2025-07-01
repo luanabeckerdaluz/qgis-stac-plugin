@@ -1,17 +1,17 @@
 from typing import Dict, List, Any, Optional, cast, TYPE_CHECKING
 
-import pystac
-from pystac.serialization.identify import STACVersionID, identify_stac_object
-from pystac.validation.schema_uri_map import OldExtensionSchemaUriMap
-from pystac.utils import make_absolute_href
+from qgis_stac.lib import pystac
+from ..serialization.identify import STACVersionID, identify_stac_object
+from ..validation.schema_uri_map import OldExtensionSchemaUriMap
+from ..utils import make_absolute_href
 
 if TYPE_CHECKING:
-    from pystac.stac_object import STACObject as STACObject_Type
-    from pystac.stac_object import STACObjectType as STACObjectType_Type
+    from ..stac_object import STACObject as STACObject_Type
+    from ..stac_object import STACObjectType as STACObjectType_Type
 
 
 # Import after above class definition
-from pystac.validation.stac_validator import STACValidator, JsonSchemaSTACValidator
+from ..validation.stac_validator import STACValidator, JsonSchemaSTACValidator
 
 
 def validate(stac_object: "STACObject_Type") -> List[Any]:

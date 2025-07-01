@@ -6,13 +6,13 @@ import warnings
 from functools import singledispatch
 from urllib.parse import urlparse
 import requests
-from pydantic import BaseModel, Field
-from pystac import Asset, Item, ItemCollection
-from pystac.utils import datetime_to_str
-from pystac_client import ItemSearch
+from ..pydantic import BaseModel, Field
+from ..pystac import Asset, Item, ItemCollection
+from ..pystac.utils import datetime_to_str
+from ..pystac_client import ItemSearch
 
-from planetary_computer.settings import Settings
-from planetary_computer.utils import (
+from .settings import Settings
+from .utils import (
     parse_blob_url,
     parse_adlfs_url,
     is_fsspec_asset,

@@ -2,11 +2,11 @@ from collections import ChainMap
 from copy import copy
 from typing import Any, Dict, List, Optional, TYPE_CHECKING, Tuple, Union, cast
 
-import pystac
+from qgis_stac.lib import pystac
 
 if TYPE_CHECKING:
-    from pystac.stac_object import STACObject as STACObject_Type
-    from pystac.collection import Collection as Collection_Type
+    from .stac_object import STACObject as STACObject_Type
+    from .collection import Collection as Collection_Type
 
 
 def get_cache_key(stac_object: "STACObject_Type") -> Tuple[str, bool]:

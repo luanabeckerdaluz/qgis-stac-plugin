@@ -1,10 +1,10 @@
 from typing import (Iterable, TYPE_CHECKING)
 
-import pystac
-from pystac_client.item_search import ItemSearch
+from qgis_stac.lib import pystac
+from .item_search import ItemSearch
 
 if TYPE_CHECKING:
-    from pystac.item import Item as Item_Type
+    from ..pystac.item import Item as Item_Type
 
 
 class CollectionClient(pystac.Collection):

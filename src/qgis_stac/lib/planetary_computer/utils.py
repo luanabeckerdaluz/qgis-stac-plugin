@@ -3,7 +3,7 @@ import re
 from typing import Tuple, Optional
 from urllib.parse import ParseResult, urlunparse, urlparse
 
-import pystac
+from qgis_stac.lib import pystac
 
 
 def parse_blob_url(parsed_url: ParseResult) -> Tuple[str, str]:

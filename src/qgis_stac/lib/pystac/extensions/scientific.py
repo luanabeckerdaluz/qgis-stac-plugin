@@ -11,14 +11,14 @@ import copy
 from typing import Any, Dict, Generic, List, Optional, TypeVar, Union, cast
 from urllib import parse
 
-import pystac
-from pystac.extensions.base import (
+from qgis_stac.lib import pystac
+from ..extensions.base import (
     ExtensionManagementMixin,
     PropertiesExtension,
     SummariesExtension,
 )
-from pystac.extensions.hooks import ExtensionHooks
-from pystac.utils import StringEnum, map_opt
+from ..extensions.hooks import ExtensionHooks
+from ..utils import StringEnum, map_opt
 
 T = TypeVar("T", pystac.Collection, pystac.Item)
 

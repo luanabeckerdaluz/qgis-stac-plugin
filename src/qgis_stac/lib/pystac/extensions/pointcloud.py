@@ -4,15 +4,15 @@ https://github.com/stac-extensions/pointcloud
 """
 from typing import Any, Dict, Iterable, Generic, List, Optional, TypeVar, cast, Union
 
-import pystac
-from pystac.extensions.base import (
+from qgis_stac.lib import pystac
+from ..extensions.base import (
     ExtensionManagementMixin,
     PropertiesExtension,
     SummariesExtension,
 )
-from pystac.extensions.hooks import ExtensionHooks
-from pystac.summaries import RangeSummary
-from pystac.utils import StringEnum, map_opt, get_required
+from ..extensions.hooks import ExtensionHooks
+from ..summaries import RangeSummary
+from ..utils import StringEnum, map_opt, get_required
 
 T = TypeVar("T", pystac.Item, pystac.Asset)
 

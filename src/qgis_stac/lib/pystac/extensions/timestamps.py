@@ -4,17 +4,17 @@ https://github.com/stac-extensions/timestamps
 """
 
 from datetime import datetime as datetime
-from pystac.summaries import RangeSummary
+from ..summaries import RangeSummary
 from typing import Dict, Any, Iterable, Generic, Optional, TypeVar, Union, cast
 
-import pystac
-from pystac.extensions.base import (
+from qgis_stac.lib import pystac
+from ..extensions.base import (
     ExtensionManagementMixin,
     PropertiesExtension,
     SummariesExtension,
 )
-from pystac.extensions.hooks import ExtensionHooks
-from pystac.utils import datetime_to_str, map_opt, str_to_datetime
+from ..extensions.hooks import ExtensionHooks
+from ..utils import datetime_to_str, map_opt, str_to_datetime
 
 T = TypeVar("T", pystac.Item, pystac.Asset)
 

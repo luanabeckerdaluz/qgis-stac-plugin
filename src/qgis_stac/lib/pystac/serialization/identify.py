@@ -2,11 +2,11 @@ from enum import Enum
 from functools import total_ordering
 from typing import Any, Dict, Optional, Set, TYPE_CHECKING, Union
 
-import pystac
-from pystac.version import STACVersion
+from qgis_stac.lib import pystac
+from ..version import STACVersion
 
 if TYPE_CHECKING:
-    from pystac.stac_object import STACObjectType as STACObjectType_Type
+    from ..stac_object import STACObjectType as STACObjectType_Type
 
 
 class OldExtensionShortIDs(Enum):

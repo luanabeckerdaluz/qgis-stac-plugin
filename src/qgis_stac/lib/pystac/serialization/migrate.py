@@ -1,16 +1,16 @@
 from copy import deepcopy
 from typing import Any, Callable, Dict, List, Optional, Set, TYPE_CHECKING, Tuple
 
-import pystac
-from pystac.version import STACVersion
-from pystac.serialization.identify import (
+from qgis_stac.lib import pystac
+from ..version import STACVersion
+from ..serialization.identify import (
     OldExtensionShortIDs,
     STACJSONDescription,
     STACVersionID,
 )
 
 if TYPE_CHECKING:
-    from pystac import STACObjectType as STACObjectType_Type
+    from qgis_stac.lib.pystac import STACObjectType as STACObjectType_Type
 
 
 def _migrate_catalog(

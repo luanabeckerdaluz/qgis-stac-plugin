@@ -2,11 +2,11 @@ from abc import ABC, abstractmethod
 from functools import lru_cache
 from typing import Any, Dict, Iterable, List, Optional, Set, TYPE_CHECKING, Union
 
-import pystac
-from pystac.serialization.identify import STACJSONDescription, STACVersionID
+from qgis_stac.lib import pystac
+from ..serialization.identify import STACJSONDescription, STACVersionID
 
 if TYPE_CHECKING:
-    from pystac.stac_object import STACObject as STACObject_Type
+    from ..stac_object import STACObject as STACObject_Type
 
 
 class ExtensionHooks(ABC):

@@ -5,14 +5,14 @@ https://github.com/stac-extensions/view
 
 from typing import Any, Dict, Generic, Iterable, Optional, TypeVar, Union, cast
 
-import pystac
-from pystac.summaries import RangeSummary
-from pystac.extensions.base import (
+from qgis_stac.lib import pystac
+from ..summaries import RangeSummary
+from ..extensions.base import (
     ExtensionManagementMixin,
     PropertiesExtension,
     SummariesExtension,
 )
-from pystac.extensions.hooks import ExtensionHooks
+from ..extensions.hooks import ExtensionHooks
 
 T = TypeVar("T", pystac.Item, pystac.Asset)
 

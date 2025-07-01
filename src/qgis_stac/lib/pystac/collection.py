@@ -1,6 +1,6 @@
 from copy import deepcopy
 from datetime import datetime
-from pystac.errors import STACTypeError
+from .errors import STACTypeError
 from typing import (
     Any,
     Dict,
@@ -17,24 +17,24 @@ from typing import (
 import dateutil.parser
 from dateutil import tz
 
-import pystac
-from pystac import STACObjectType, CatalogType
-from pystac.asset import Asset
-from pystac.catalog import Catalog
-from pystac.layout import HrefLayoutStrategy
-from pystac.link import Link
-from pystac.provider import Provider
-from pystac.utils import datetime_to_str
-from pystac.serialization import (
+from qgis_stac.lib import pystac
+from qgis_stac.lib.pystac import STACObjectType, CatalogType
+from .asset import Asset
+from .catalog import Catalog
+from .layout import HrefLayoutStrategy
+from .link import Link
+from .provider import Provider
+from .utils import datetime_to_str
+from .serialization import (
     identify_stac_object_type,
     identify_stac_object,
     migrate_to_latest,
 )
-from pystac.summaries import Summaries
+from .summaries import Summaries
 
 if TYPE_CHECKING:
-    from pystac.item import Item as Item_Type
-    from pystac.provider import Provider as Provider_Type
+    from .item import Item as Item_Type
+    from .provider import Provider as Provider_Type
 
 T = TypeVar("T")
 

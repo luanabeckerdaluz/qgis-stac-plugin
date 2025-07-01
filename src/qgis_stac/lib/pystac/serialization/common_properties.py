@@ -1,9 +1,9 @@
 from typing import Any, Dict, Iterable, List, Optional, Union, cast
 
-import pystac
-from pystac.cache import CollectionCache
-from pystac.serialization.identify import STACVersionID
-from pystac.utils import make_absolute_href
+from qgis_stac.lib import pystac
+from ..cache import CollectionCache
+from ..serialization.identify import STACVersionID
+from ..utils import make_absolute_href
 
 
 def merge_common_properties(
